@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Search\PostProvider;
 use Illuminate\Support\ServiceProvider;
 use Statamic\Statamic;
 
@@ -24,5 +25,7 @@ class AppServiceProvider extends ServiceProvider
         //     'resources/js/cp.js',
         //     'resources/css/cp.css',
         // ]);
+
+        PostProvider::register();
     }
 }
