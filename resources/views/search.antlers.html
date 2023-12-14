@@ -1,0 +1,27 @@
+<h1 class="text-6xl mb-12 text-center italic uppercase font-light tracking-widest antialiased">Search Results</h1>
+
+<div class="max-w-xl mx-auto">
+    <form class="bg-white p-4 mt-6 mb-12 rounded-md flex gap-x-4" action="/search" method="get">
+        <input class="border w-full rounded-md px-4" type="search" name="q" placeholder="Search">
+        <button class="bg-indigo-800 px-4 py-2 rounded text-white font-medium">Search</button>
+    </form>
+
+    {{ if get:q }}
+        <div class="bg-white p-4">
+            <h2 class="text-2xl font-bold mb-2">Search Results</h2>
+
+            {{ search:results index="runway_posts" as="results" }}
+                {{ if no_results }}
+                    <p>No results found for {{ get:q }}.</p>
+                {{ else }}
+                    <ul class="list-disc pl-4">
+                        {{ results }}
+                            <li class="py-1"><a class="" href="{{ url }}">{{ title }} <br> <code class="text-xs">{{ slug }}</code></a></li>
+                        {{ /results }}
+                    </ul>
+                {{ /if }}
+            {{ /search:results }}
+        </div>
+    {{ /if }}
+
+</div>
