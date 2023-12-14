@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfd0921abc4b01e83d035430d7bc9610",
+    "content-hash": "f57851da961f2f613e41f55979ec391e",
     "packages": [
         {
             "name": "ajthinking/archetype",
@@ -1065,6 +1065,63 @@
                 }
             ],
             "time": "2022-12-15T16:57:16+00:00"
+        },
+        {
+            "name": "doublethreedigital/runway",
+            "version": "v5.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/duncanmcclean/runway.git",
+                "reference": "dd79b7f51149f50cfd5450b465789a37ed446b11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/duncanmcclean/runway/zipball/dd79b7f51149f50cfd5450b465789a37ed446b11",
+                "reference": "dd79b7f51149f50cfd5450b465789a37ed446b11",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "pixelfear/composer-dist-plugin": "^0.1.5",
+                "statamic/cms": "^4.0"
+            },
+            "require-dev": {
+                "nunomaduro/collision": "^6.1",
+                "orchestra/testbench": "^7.0",
+                "rector/rector": "^0.14.7",
+                "spatie/test-time": "^1.2"
+            },
+            "type": "library",
+            "extra": {
+                "statamic": {
+                    "name": "Runway",
+                    "description": "Use Eloquent in Statamic like never before."
+                },
+                "laravel": {
+                    "providers": [
+                        "DoubleThreeDigital\\Runway\\ServiceProvider"
+                    ]
+                },
+                "download-dist": {
+                    "url": "https://github.com/duncanmcclean/runway/releases/download/{$version}/dist.tar.gz",
+                    "path": "dist"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DoubleThreeDigital\\Runway\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "description": "Use Eloquent in Statamic like never before.",
+            "support": {
+                "issues": "https://github.com/duncanmcclean/runway/issues",
+                "source": "https://github.com/duncanmcclean/runway/tree/v5.5.2"
+            },
+            "time": "2023-12-01T10:59:04+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
